@@ -1,0 +1,276 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    list-style: none;
+}
+
+body{
+    width: 100%;
+    background-color: #050810;
+    padding:0px 80px ;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* TopBar */
+
+header{ 
+    padding: 35px 0px 0px 0px;
+}
+
+.topbar{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    padding: 20px 15px;
+    background-color: #191D29;
+    border-radius: 14px;
+    margin-bottom: 25px;
+}
+
+ul#menu{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul#menu li{
+    color: white;
+    margin: 0px 15px;
+}
+
+ul#language{
+    display: flex;
+    color: white;
+}
+
+#language li{
+    margin: 0px 4px;
+}
+
+#menu a, #language a{
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+#menu a:hover, #language a:hover{
+    color: #14E956;
+}
+
+button#buttonMenu{
+    background-color: #14E956;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    color: 050810;
+    font-family: poppins,sans-serif;
+    border: none;
+    border-radius: 8px;
+    transition: background-color ease-in 0.3s;
+}
+
+button#buttonMenu:hover{
+    background-color: #09c845;
+    cursor: pointer;
+}
+
+/* section container */
+
+section{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background-color:rgba(0, 0, 7, 0.85);
+    background-image: url(assets/img/sectioncontainerbg(2).jpg);
+    background-blend-mode: overlay;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: fill;
+    padding: 60px 80px 20px;
+    margin: 0px 0px 20px;
+}
+
+
+h4{
+    padding: 12px 19px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #14E956;
+}
+.boxh4{
+    background-color: #14e95829;
+    display: inline;
+    border-radius: 12px;
+}
+
+
+
+.column-1 h1{
+    font: 600 normal 64px "poppins", sans serif;
+    color: white;
+    line-height: 76px;
+    margin-top: 20px;
+}
+
+.column-1 p{
+    margin: 16px 0px 34px;
+    color: #ffffffa4;
+    font: normal 400 14px "poppins", sans-serif;
+}
+
+#startTrading{
+    background-color: #14E956;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 27px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background,color,box-shadow, 0.3s ease;
+}
+#startTrading:hover{
+    background-color: #111;
+    color: white;
+    box-shadow: 0px 5px 10px 0px #000;
+    cursor: pointer;
+}
+
+/* --- Responsivo --- */
+
+@media (max-width:1259px){
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .container img{
+        margin-top: 20px;
+        width: 50vw;
+    }
+}
+
+@media (max-width:1024px){
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .container img{
+        margin-top: 20px;
+        width: 50vw;
+    }
+}
+
+@media (max-width:768px){
+
+    body{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    header{
+        display: flex;
+        width: 100vw;
+    }
+
+    .topbar{
+        width: 80vw;
+        display:flex;
+        justify-content: center;
+    }
+    .topbar img{
+        width: 50vw;
+    }
+
+    .topbar button{
+        margin-top: 15px;
+    }
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 80vw;
+    }
+
+    .boxh4{
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .container h1{
+        font-size: 35px;
+        line-height: 3rem;
+    }
+}
+
+@media (max-width:426px){
+
+    body{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    header{
+        display: flex;
+        width: 100vw;
+    }
+
+    .topbar{
+        width: 80vw;
+        display:flex;
+        justify-content: space-around;
+    }
+
+    .container h1{
+        line-height: 3rem;
+    }
+
+    .container .boxh4{
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width:366px){
+    .column-1 h1{
+        font-size: 2em;
+    }
+}
+
+@media (max-width:320px){
+    body{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .topbar{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .container h1{
+        font-size: 1.8rem;
+    }
+
+    .container img{
+        width: 70vw;
+    }
+}
