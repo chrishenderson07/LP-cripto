@@ -97,7 +97,7 @@ section{
     background-blend-mode: overlay;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: fill;
+    background-size: 1920px;
     padding: 60px 80px 20px;
     margin: 0px 0px 20px;
 }
