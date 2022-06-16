@@ -79,6 +79,10 @@ button#buttonMenu:hover{
     cursor: pointer;
 }
 
+#btn-mobile{
+    display: none;
+}
+
 /* section container */
 
 section{
@@ -217,6 +221,100 @@ h4{
     .container h1{
         font-size: 35px;
         line-height: 3rem;
+    }
+}
+
+@media (max-width:600px){
+
+    .topbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;             
+    }
+
+    .topbar img{
+        width: 200px;
+    }
+
+/*Mobile Button*/
+
+    #btn-mobile{
+        display: flex;
+        margin: 0px;
+        font-size: 1rem;
+        border:none;
+        background: none;
+        cursor:pointer;
+    }
+
+    ul#menu{
+        display: block;
+        position: absolute;
+        margin: 0px;
+        width: 80%;
+        top:100px;
+        left: 9.5%;
+        right: 9.5%;
+        background: #191D29;
+        height: 0px;
+        padding: 25px;
+        z-index:100;
+        transition: .6s ease-in;
+        visibility: hidden;
+        overflow-y: hidden;
+        
+    }
+    
+    .topbar.active ul#menu{
+        height: calc(100vh - 100px);    
+        visibility: visible;
+    }
+
+    #hamburger{
+        display: block;
+        color: white;
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+    #hamburger::after, #hamburger::before{
+        content: ' ';
+        display: block;
+        width:20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+    
+    .topbar.active #hamburger{
+        border-top-color:transparent;
+    }
+
+    .topbar.active #hamburger::before{
+        transform: rotate(135deg);
+    }
+    
+    .topbar.active #hamburger::after{
+        transform: rotate(-135deg);
+        top: -7px;
+
+        /*End Mobile Button*/
+    }
+    ul#language{
+        display: none;
+    }
+
+    #buttonMenu{
+        display: none;
+    }
+
+
+    #menu li{
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.115);
     }
 }
 
