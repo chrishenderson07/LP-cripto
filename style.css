@@ -228,80 +228,83 @@ h4{
 
     .topbar{
         display: flex;
-        align-items: center;
-        justify-content: space-between;             
+        align-items: center;  
+        justify-content: space-around;
+        width: 80vw;        
     }
 
     .topbar img{
         width: 200px;
     }
 
-/*Mobile Button*/
+    /*Novo Mobile Button*/
 
     #btn-mobile{
-        display: flex;
+        display: block;
         margin: 0px;
-        font-size: 1rem;
-        border:none;
-        background: none;
-        cursor:pointer;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
     }
 
+        
     ul#menu{
         display: block;
+        padding: 0px;
+        box-sizing: border-box;
+        border-radius: 0px 0px 20px 20px;
+        background-color: #191D29;
         position: absolute;
-        margin: 0px;
-        width: 80%;
-        top:100px;
-        left: 9.5%;
-        right: 9.5%;
-        background: #191D29;
-        height: 0px;
-        padding: 25px;
-        z-index:100;
-        transition: .6s ease-in;
+        width: 80vw;
+        height: 0vh;
+        top: 100px;
+        z-index: 10000;
         visibility: hidden;
         overflow-y: hidden;
-        
+        transition: .6s;
     }
-    
+
     .topbar.active ul#menu{
-        height: calc(100vh - 100px);    
+        height: calc(80vh - 100px);
         visibility: visible;
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.322);
     }
 
     #hamburger{
         display: block;
+        position: relative;
+        background: transparent;
         color: white;
         border-top: 2px solid;
         width: 20px;
     }
 
-    #hamburger::after, #hamburger::before{
-        content: ' ';
+    #hamburger::before, #hamburger::after{
         display: block;
-        width:20px;
-        height: 2px;
-        background: currentColor;
-        margin-top: 5px;
-        transition: .3s;
+        content: ' ';
         position: relative;
+        background: currentColor;
+        width: 20px;
+        height: 2px;
+        margin-top:5px;
+        transition: .3s;
     }
-    
+
     .topbar.active #hamburger{
-        border-top-color:transparent;
+        border-top: hidden;
     }
 
     .topbar.active #hamburger::before{
         transform: rotate(135deg);
     }
-    
+
     .topbar.active #hamburger::after{
         transform: rotate(-135deg);
         top: -7px;
-
-        /*End Mobile Button*/
     }
+
+    /*End Mobile Button*/
+
     ul#language{
         display: none;
     }
